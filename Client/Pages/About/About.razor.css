@@ -1,0 +1,30 @@
+
+  .paragraph {
+    padding: 5% 10% 2%;
+    margin: 0px;
+    line-height: 1.5;
+    text-align: justify;    
+  }
+  .paragraph:nth-child(3) {
+    font-style: italic;
+  }
+  h2{    
+    margin: 0px;
+    padding-top: 5%;
+  }
+
+  strong{
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  .actions{
+    padding-top: 3%;
+    font-size: 30px;
+  }
+
+  .actions > a:hover{
+    color: black;
+  }
