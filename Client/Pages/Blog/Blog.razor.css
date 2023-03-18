@@ -1,5 +1,5 @@
-.blog-pagination{
-    position: inherit;
+.blog-pagination {
+    position: absolute;
     width: 100%;
     bottom: 0;
     text-align: center;
@@ -7,6 +7,7 @@
 
 .post-item{
     margin-bottom: 20px;
+    display: none;
 }
 
 .post-container .row {

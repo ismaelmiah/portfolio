@@ -3,8 +3,24 @@
     padding: 0;
 }
 
+h3 {
+    font-size: 20px;
+}
+
 a {
     color: black;
+    padding: 3px;
+}
+
+.contacts > a:hover {
+    background: green;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.icon {
+    margin-right: 5px;
 }
 
 .heading {
@@ -15,14 +31,15 @@ a {
     text-transform: uppercase;
 }
 
-.fa-phone, .fa-envelope {
-    text-decoration: none;
-}
-
 .resume-section .title {
     display: flex;
     align-items: baseline;
+    margin: 10px 0px;
 }
+
+    .resume-section .title:hover {
+        background: #0080001a;
+    }
 
     .resume-section .title h2 {
         margin: 0px 5px 0px 0px;
@@ -50,6 +67,7 @@ a {
 
     .post-details > ul > li {
         line-height: 1.3;
+        text-align: justify;
     }
 
 li > p {

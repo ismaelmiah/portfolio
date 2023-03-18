@@ -1,5 +1,5 @@
 .blog-pagination {
-    position: inherit;
+    position: absolute;
     width: 100%;
     bottom: 0;
     text-align: center;
@@ -7,8 +7,15 @@
 
 .post-item {
     margin-bottom: 20px;
+    max-height: 220px;
+}
+.post-item .card{
+    height: 220px;
 }
 
-.post-container .row {
-    margin: 0px;
-}
+    .post-item .card-text{
+        text-align: justify;
+    }
+    .post-container .row {
+        margin: 0px;
+    }
