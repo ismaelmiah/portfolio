@@ -1,0 +1,20 @@
+steps:
+  # Clone the GitHub repository
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/ismaelmiah/portfolio.git', 'app']
+
+  # Build the ASP.NET application
+  - name: 'gcr.io/cloud-builders/dotnet'
+    args: ['build', 'app/Portfolio.App.csproj']
+
+  # Publish the ASP.NET application
+  - name: 'gcr.io/cloud-builders/dotnet'
+    args: ['publish', 'app/Portfolio.App.csproj', '-c', 'Release', '-o', 'published-app']
+
+  # Copy published files to the VM
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['compute', 'scp', '--recurse', 'published-app/*', 'portfolio-vm:/home/ismael/portfolio']
+
+  # Restart the ASP.NET application on the VM
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['compute', 'ssh', 'portfolio-vm', '--command', 'sudo systemctl restart portfolio.service']
