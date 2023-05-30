@@ -5,11 +5,11 @@ steps:
 
   # Build the ASP.NET application
   - name: 'gcr.io/cloud-builders/dotnet'
-    args: ['build', 'app/Portfolio.App.csproj']
+    args: ['build', 'Client/Portfolio.App.csproj']
 
   # Publish the ASP.NET application
   - name: 'gcr.io/cloud-builders/dotnet'
-    args: ['publish', 'app/Portfolio.App.csproj', '-c', 'Release', '-o', 'published-app']
+    args: ['publish', 'Client/Portfolio.App.csproj', '-c', 'Release', '-o', 'published-app']
 
   # Copy published files to the VM
   - name: 'gcr.io/cloud-builders/gcloud'
